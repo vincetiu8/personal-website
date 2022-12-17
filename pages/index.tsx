@@ -632,7 +632,7 @@ export default function Home() {
                     link: "https://github.com/RKSDude",
                   },
                 ],
-                tools: ["unity", "c#"],
+                tools: ["unity", "csharp"],
               },
               {
                 name: "Rhythm Hell",
@@ -654,7 +654,7 @@ export default function Home() {
                     link: "https://github.com/RKSDude",
                   },
                 ],
-                tools: ["unity", "c#"],
+                tools: ["unity", "csharp"],
               },
               {
                 name: "Math Aiming Corrections",
@@ -667,7 +667,7 @@ export default function Home() {
                 youtube: "https://www.youtube.com/watch?v=k1LsOcL6QAE",
                 website:
                   "https://docs.google.com/document/d/13QM-74e9h3rMFswLgEVXhA07sw8lRIxKdEd8BaaQYn0/edit?usp=sharing",
-                tools: ["unity", "c#"],
+                tools: ["unity", "csharp"],
               },
             ].map((item: Project) => (
               <UnstyledButton
@@ -689,8 +689,10 @@ export default function Home() {
                   })}
                   w="md"
                 >
-                  <Title order={4}>{item.name}</Title>
-                  <Text>{item.description}</Text>
+                  <Title order={4} color="gray.0">
+                    {item.name}
+                  </Title>
+                  <Text color="gray.0">{item.description}</Text>
                 </Container>
               </UnstyledButton>
             ))}

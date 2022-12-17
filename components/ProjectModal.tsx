@@ -122,7 +122,7 @@ export default function ProjectModal(props: ProjectModalProps) {
           </Flex>
         )}
         {awards && (
-          <Flex gap="sm" align="center">
+          <Flex gap="sm" align="center" wrap="wrap">
             <Text size="sm">Awards:</Text>
             {awards.map((award) => (
               <Badge color="yellow.6" variant="filled">
