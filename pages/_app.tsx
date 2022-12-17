@@ -19,7 +19,7 @@ export default function App(props: AppProps) {
       <link
         rel="stylesheet"
         type="text/css"
-        href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"
+        href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin&display=optional"
       />
       <MantineProvider
         withGlobalStyles
@@ -50,7 +50,7 @@ export default function App(props: AppProps) {
             xl: 64,
           },
           colors: {
-            dark: [
+            "dark-theme": [
               "#ffffff",
               "#D33737",
               "#EC5D5D",
@@ -62,7 +62,7 @@ export default function App(props: AppProps) {
               "#aaaaaa",
               "#dddddd",
             ],
-            light: [
+            "light-theme": [
               "#DDDDDD",
               "#730000",
               "#B01B1B",
@@ -76,7 +76,10 @@ export default function App(props: AppProps) {
             ],
           },
           primaryColor: "dark",
-          primaryShade: 0,
+          primaryShade: {
+            light: 7,
+            dark: 3,
+          },
           fontFamily: "Ubuntu, Open Sans, Roboto, Arial",
           components: {
             Image: {
@@ -101,7 +104,7 @@ export default function App(props: AppProps) {
               styles: (theme) => ({
                 root: {
                   borderStyle: "solid",
-                  borderColor: theme.colors[theme.colorScheme][9],
+                  borderColor: theme.colors[`${theme.colorScheme}-theme`][9],
                   borderRadius: "100%",
                   borderWidth: theme.spacing.xs,
                 },
