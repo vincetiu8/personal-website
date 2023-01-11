@@ -16,11 +16,6 @@ export default function App(props: AppProps) {
         />
       </Head>
 
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin&display=optional"
-      />
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
@@ -109,6 +104,21 @@ export default function App(props: AppProps) {
                   borderWidth: theme.spacing.xs,
                 },
               }),
+            },
+            Flex: {
+              styles: {
+                root: {
+                  maxWidth: "fit-content",
+                  maxHeight: "fit-content",
+                },
+              },
+            },
+            Title: {
+              styles: {
+                root: {
+                  display: "inline",
+                },
+              },
             },
           },
           headings: {

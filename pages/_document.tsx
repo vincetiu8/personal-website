@@ -14,6 +14,11 @@ export default class Doc extends Document {
           <Main />
           <NextScript />
         </body>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin&display=optional"
+        />
       </Html>
     );
   }

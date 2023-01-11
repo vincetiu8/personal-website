@@ -2,8 +2,8 @@ import {
   ActionIcon,
   Container,
   Flex,
+  Grid,
   Image,
-  SimpleGrid,
   Space,
   Text,
   ThemeIcon,
@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <>
       <Flex direction="column" gap="lg" align="center">
-        <Flex gap="lg" justify="space-between">
+        <Flex direction="column" align="center">
           <Container
             sx={(theme) => ({
               backgroundColor: theme.colors[`${theme.colorScheme}-theme`][1],
@@ -52,62 +52,64 @@ export default function Home() {
               height={200}
             />
           </Container>
-          <Flex direction="column">
-            <Title order={1}>Hi there! I&apos;m Vince.</Title>
-            <Title order={2}>
-              Sometimes coder, sometimes leader, all times builder.
-            </Title>
-            <Text fz="md">
-              Here you can learn a little bit more about me, my work and my
-              passions.
-            </Text>
-            <Space h="md" />
-            <Flex gap="md">
-              {[
-                {
-                  href: "https://twitter.com/vincetiu8",
-                  icon: IconBrandTwitter,
-                  color: "cyan",
-                  shade: 7,
-                },
-                {
-                  href: "https://linkedin.com/in/vincetiu8",
-                  icon: IconBrandLinkedin,
-                  color: "indigo",
-                  shade: 7,
-                },
-                {
-                  href: "https://github.com/vincetiu8",
-                  icon: IconBrandGithub,
-                  color: "dark",
-                  shade: 9,
-                },
-              ].map((item) => (
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={item.href}
-                >
-                  <ActionIcon>
-                    <ThemeIcon
-                      size="xl"
-                      sx={(theme) => ({
-                        backgroundColor: theme.colors[item.color][item.shade],
-                      })}
-                    >
-                      <item.icon />
-                    </ThemeIcon>
-                  </ActionIcon>
-                </a>
-              ))}
-            </Flex>
+          <Title order={1} ta="center">
+            Hi there! I&apos;m Vince
+          </Title>
+          <Title order={2} ta="center">
+            Sometimes coder, sometimes leader, all times builder.
+          </Title>
+          <Text fz="md" ta="center">
+            Here you can learn a little bit more about me, my work and my
+            passions.
+          </Text>
+          <Space h="md" />
+          <Flex gap="md" justify="center">
+            {[
+              {
+                href: "https://twitter.com/vincetiu8",
+                icon: IconBrandTwitter,
+                color: "cyan",
+                shade: 7,
+              },
+              {
+                href: "https://linkedin.com/in/vincetiu8",
+                icon: IconBrandLinkedin,
+                color: "indigo",
+                shade: 7,
+              },
+              {
+                href: "https://github.com/vincetiu8",
+                icon: IconBrandGithub,
+                color: "dark",
+                shade: 9,
+              },
+            ].map((item) => (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={item.href}
+              >
+                <ActionIcon>
+                  <ThemeIcon
+                    size="xl"
+                    sx={(theme) => ({
+                      backgroundColor: theme.colors[item.color][item.shade],
+                    })}
+                  >
+                    <item.icon />
+                  </ThemeIcon>
+                </ActionIcon>
+              </a>
+            ))}
           </Flex>
         </Flex>
 
         <Flex direction="column" align="center" gap="md">
-          <Title order={2}>Fun facts about me</Title>
-          <Flex direction="row" gap="xl" justify="space-evenly">
+          <Title order={2} ta="center">
+            Fun facts about me
+          </Title>
+          <Flex direction="row" gap="lg" justify="space-evenly" wrap="wrap">
             {[
               {
                 caption: "Grew up in the Philippines",
@@ -118,7 +120,7 @@ export default function Home() {
                 alt: "Vince and his siblings",
               },
               {
-                caption: "Studying Computer Science at UPenn",
+                caption: "Studying CompSci at UPenn",
                 icon: IconSchool,
                 color: "blue",
                 shade: 7,
@@ -161,7 +163,8 @@ export default function Home() {
               </Flex>
             ))}
           </Flex>
-          <Flex gap="lg">
+
+          <Flex gap="lg" wrap="wrap" justify="center">
             {[
               {
                 caption: "Languages I speak",
@@ -328,7 +331,12 @@ export default function Home() {
               <Flex direction="column" align="center" key={section.caption}>
                 <Title order={3}>{section.caption}</Title>
                 <Space h="md" />
-                <Flex direction="row" gap="md" justify="space-evenly">
+                <Flex
+                  direction="row"
+                  gap="md"
+                  justify="space-evenly"
+                  wrap="wrap"
+                >
                   {section.items.map((item) => (
                     <Flex
                       sx={(theme) => ({
@@ -409,8 +417,10 @@ export default function Home() {
         </Flex>
 
         <Flex direction="column" gap="lg" align="center">
-          <Title order={2}>Some of my projects</Title>
-          <SimpleGrid cols={4}>
+          <Title order={2} ta="center">
+            Some of my projects
+          </Title>
+          <Grid justify="center">
             {[
               {
                 name: "Dance Dance Revolution",
@@ -670,33 +680,34 @@ export default function Home() {
                 tools: ["unity", "csharp"],
               },
             ].map((item: Project) => (
-              <UnstyledButton
-                onClick={() => {
-                  setModalOpened(true);
-                  setProject(item);
-                }}
-              >
-                <Container
-                  sx={(theme) => ({
-                    borderStyle: "solid",
-                    borderColor: theme.colors[item.color][4],
-                    backgroundImage: `url(images/projects/${item.image})`,
-                    backgroundSize: "cover",
-                    backgroundBlendMode: "multiply",
-                    backgroundColor: "rgba(0, 0, 0, 0.7)",
-                    maxWidth: 300,
-                    minHeight: 180,
-                  })}
-                  w="md"
+              <Grid.Col sm={4} lg={3} xl={2} sx={{ maxWidth: "fit-content" }}>
+                <UnstyledButton
+                  onClick={() => {
+                    setModalOpened(true);
+                    setProject(item);
+                  }}
+                  key={item.name}
                 >
-                  <Title order={4} color="gray.0">
-                    {item.name}
-                  </Title>
-                  <Text color="gray.0">{item.description}</Text>
-                </Container>
-              </UnstyledButton>
+                  <Container
+                    sx={(theme) => ({
+                      borderStyle: "solid",
+                      borderColor: theme.colors[item.color][4],
+                      backgroundImage: `url(images/projects/${item.image})`,
+                      backgroundSize: "cover",
+                      backgroundBlendMode: "multiply",
+                      backgroundColor: "rgba(0, 0, 0, 0.7)",
+                    })}
+                    w="md"
+                  >
+                    <Title order={4} color="gray.0">
+                      {item.name}
+                    </Title>
+                    <Text color="gray.0">{item.description}</Text>
+                  </Container>
+                </UnstyledButton>
+              </Grid.Col>
             ))}
-          </SimpleGrid>
+          </Grid>
         </Flex>
       </Flex>
       <ProjectModal
