@@ -696,6 +696,7 @@ export default function Home() {
                       backgroundSize: "cover",
                       backgroundBlendMode: "multiply",
                       backgroundColor: "rgba(0, 0, 0, 0.7)",
+                      backgroundRepeat: "no-repeat",
                     })}
                     w="md"
                   >
