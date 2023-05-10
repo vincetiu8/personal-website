@@ -136,7 +136,7 @@ export default function Home() {
                 alt: "Vince eating ice cream",
               },
             ].map((item) => (
-              <Flex direction="column" gap="sm" align="center">
+              <Flex direction="column" gap="sm" align="center" key={item.src}>
                 <Flex direction="row" gap="sm">
                   <ThemeIcon
                     size="lg"
@@ -218,6 +218,10 @@ export default function Home() {
                         icon: "bash",
                       },
                       {
+                        name: "C++",
+                        icon: "cplusplus",
+                      },
+                      {
                         name: "OCaml",
                         icon: "ocaml",
                       },
@@ -243,10 +247,6 @@ export default function Home() {
                         name: "Tagalog",
                         icon: "PH",
                         color: "blue",
-                      },
-                      {
-                        name: "C++",
-                        icon: "cplusplus",
                       },
                       {
                         name: "Flutter",
@@ -299,8 +299,23 @@ export default function Home() {
                     shade: 5,
                     subItems: [
                       {
-                        name: "ConsenSys",
-                        icon: "consensys.png",
+                        name: "Ion Protocol",
+                        icon: "ion-protocol.png",
+                        color: "cyan",
+                      },
+                      {
+                        name: "FranklinDAO",
+                        icon: "franklindao.png",
+                        color: "violet",
+                      },
+                      {
+                        name: "Hack4Impact",
+                        icon: "hack4impact.png",
+                        color: "green",
+                      },
+                      {
+                        name: "Penn Labs",
+                        icon: "penn-labs.png",
                         color: "blue",
                       },
                       {
@@ -309,19 +324,9 @@ export default function Home() {
                         color: "orange",
                       },
                       {
-                        name: "Penn Labs",
-                        icon: "penn-labs.png",
+                        name: "ConsenSys",
+                        icon: "consensys.png",
                         color: "blue",
-                      },
-                      {
-                        name: "Hack4Impact",
-                        icon: "hack4impact.png",
-                        color: "green",
-                      },
-                      {
-                        name: "FranklinDAO",
-                        icon: "franklindao.png",
-                        color: "violet",
                       },
                     ],
                   },
@@ -423,6 +428,86 @@ export default function Home() {
           <Grid justify="center">
             {[
               {
+                name: "Ion Protocol",
+                description: "Enhancing liquidity for validator staked assets.",
+                longDescription:
+                  "Ion Protocol is a decentralized protocol that consolidates liquidity for Liquid Staking Tokens (LSTs). These tokens are issued by Liquid Staking Providers as collateral for deposited tokens. Ion is a hybrid between a CDP issuer and a lending market, allowing the protocol to account for different risk models between validator sets. It is built using on-chain Solidity contracts, off-chain Golang services and a React frontend.",
+                image: "ion-protocol.png",
+                color: "cyan",
+                website: "https://www.ionprotocol.io/",
+                tools: ["typescript", "go", "kubernetes", "docker", "solidity"],
+                teammates: [
+                  {
+                    name: "Chunda McCain",
+                    link: "https://www.linkedin.com/in/chundamccain/",
+                  },
+                  {
+                    name: "Jun Kim",
+                    link: "https://www.linkedin.com/in/jun-kim-9b1387175/",
+                  },
+                ],
+              },
+              {
+                name: "Home Away From Home",
+                description:
+                  "Knowledgebase for prospective H-1B visa applicants.",
+                longDescription:
+                  "A knowledgebase for prospective H-1B visa applicants, built for CIS 5500 final project. This webapp allows users to look for attractive housing and employment options for H-1B visa holders on a map. Users can filter jobs and housing options by various metrics. This project uses React for the frontend and NodeJS for the backend, querying a large AWS database.",
+                image: "home-away-from-home.png",
+                color: "indigo",
+                github: "https://github.com/rosewang01/home-away-from-home",
+                youtube:
+                  "https://drive.google.com/file/d/10IDt1ZLOzlN5v3WUti5OkhfkJMypgJ2P/view?usp=sharing",
+                tools: ["typescript", "react", "sqlite", "docker"],
+                teammates: [
+                  {
+                    name: "Bach Tran",
+                    link: "https://www.linkedin.com/in/giabachtran/",
+                  },
+                  {
+                    name: "Rose Wang",
+                    link: "https://www.linkedin.com/in/rose-y-wang/",
+                  },
+                ],
+              },
+              {
+                name: "Inventory Management System",
+                description: "Warehouse inventory management system.",
+                longDescription:
+                  "An inventory management system created for a warehouse. It allows warehouse operators to track inventory and manage orders. This project uses React for the frontend and Flask for the backend.",
+                image: "inventory-management-system.png",
+                color: "indigo",
+                github:
+                  "https://github.com/vincetiu8/inventory-management-system",
+                tools: ["typescript", "react", "python", "sqlite"],
+              },
+              {
+                name: "PictoGym",
+                description: "Health and fitness social media app.",
+                longDescription:
+                  "A social media app my team created for HoyaHacks 2023. It allows users to plan and post about their workouts with their friends. Users can create workout plans, track their progress, and share their workouts with their friends. This project uses React Native to compile to both iOS and Android.",
+                image: "pictogym.jpg",
+                color: "violet",
+                github: "https://github.com/vincetiu8/hoyahacks-2023",
+                youtube: "https://www.youtube.com/watch?v=NkPd6klkM4M",
+                website: "https://devpost.com/software/pictogym",
+                tools: ["typescript", "react"],
+                teammates: [
+                  {
+                    name: "Anya Chan",
+                    link: "https://www.linkedin.com/in/anyagchan/",
+                  },
+                  {
+                    name: "Lucia Enriquez",
+                    link: "https://www.linkedin.com/in/lucia-enriquez/",
+                  },
+                  {
+                    name: "Teri Chung",
+                    link: "https://www.linkedin.com/in/teri-chung0830/",
+                  },
+                ],
+              },
+              {
                 name: "Dance Dance Revolution",
                 description:
                   "Interactive dance game with animations and beatmaps.",
@@ -439,7 +524,7 @@ export default function Home() {
                 description:
                   "On-chain animal adoption marketplace with NFTs and auctions.",
                 longDescription:
-                  "An on-chain animal adoption platform my team created for the 2022 TRON Web3 Hackathon. Animal adoption and sponsorship is a notoriously opaque and disconnected process, making it hard to people to easily support local wildlife. Fawna changes this by enabling sponsorship organizations to post animal listings on the platform and users can see these listings and donate to support their chosen animal. After sponsoring an animal, users can name the animal and get a token which can be integrated into other online games, enabling them to play as their animal.",
+                  "An on-chain animal adoption platform my team created for the TRON Web3 Hackathon 2022. Animal adoption and sponsorship is a notoriously opaque and disconnected process, making it hard to people to easily support local wildlife. Fawna changes this by enabling sponsorship organizations to post animal listings on the platform and users can see these listings and donate to support their chosen animal. After sponsoring an animal, users can name the animal and get a token which can be integrated into other online games, enabling them to play as their animal.",
                 image: "fawna.png",
                 color: "green",
                 github: "https://github.com/vincetiu8/hack-web3-2022",
@@ -680,7 +765,13 @@ export default function Home() {
                 tools: ["unity", "csharp"],
               },
             ].map((item: Project) => (
-              <Grid.Col sm={4} lg={3} xl={2} sx={{ maxWidth: "fit-content" }}>
+              <Grid.Col
+                sm={4}
+                lg={3}
+                xl={2}
+                sx={{ maxWidth: "fit-content" }}
+                key={item.name}
+              >
                 <UnstyledButton
                   onClick={() => {
                     setModalOpened(true);
