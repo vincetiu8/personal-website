@@ -179,6 +179,10 @@ export default function Home() {
                         color: "blue",
                       },
                       {
+                        name: "C++",
+                        icon: "cplusplus",
+                      },
+                      {
                         name: "C#",
                         icon: "csharp",
                       },
@@ -216,10 +220,6 @@ export default function Home() {
                       {
                         name: "Bash",
                         icon: "bash",
-                      },
-                      {
-                        name: "C++",
-                        icon: "cplusplus",
                       },
                       {
                         name: "OCaml",
@@ -298,6 +298,11 @@ export default function Home() {
                     level: "",
                     shade: 5,
                     subItems: [
+                      {
+                        name: "Moonhub",
+                        icon: "moonhub.png",
+                        color: "violet",
+                      },
                       {
                         name: "Ion Protocol",
                         icon: "ion-protocol.png",
