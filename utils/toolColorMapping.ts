@@ -25,4 +25,7 @@ export const toolColorMapping: { [key: string]: string } = {
   unity: "gray",
   flask: "gray",
   mongodb: "green",
+  supabase: "green",
+  nomic: "green",
+  mistral: "yellow",
 };
