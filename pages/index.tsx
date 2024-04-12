@@ -434,7 +434,7 @@ export default function Home() {
             {[
               {
                 name: "Resonance",
-                description: "One-click crypto investment.",
+                description: "One-click multichain crypto investment.",
                 longDescription:
                   "Resonance allows users to invest in a diversified portfolio of cryptocurrencies across multiple chains with a single click. Users can choose from a variety of risk profiles and investment strategies, and Resonance will automatically allocate their funds accordingly. The platform also automatically bridges assets across chains and deploys them into relevant liquidity pools.",
                 image: "resonance.png",
@@ -455,7 +455,7 @@ export default function Home() {
                 longDescription:
                   "Sit-Downs is a chrome extension that synchronizes team activity, eliminating the need for standup meetings. The extension scrapes each website you visit and uses an AI model to generate a summary of each website. These summaries are then analyzed to deduce what you have been working on, and automatically shares this with your team in real-time. You can also see what your teammates have been working on and more information, helping your team stay productive.",
                 image: "ion-protocol.png",
-                color: "purple",
+                color: "violet",
                 github: "https://github.com/penn-genai/sit-downs",
                 youtube: "https://www.youtube.com/watch?v=38oEsslcxRI",
                 tools: ["typescript", "python", "supabase", "nomic", "mistral"],
