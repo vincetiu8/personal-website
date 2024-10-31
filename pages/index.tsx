@@ -22,10 +22,10 @@ import ReactCountryFlag from "react-country-flag";
 import { useState } from "react";
 import ProjectModal from "../components/ProjectModal";
 import { toolColorMapping } from "../utils/toolColorMapping";
-import { websitesList } from "./info/websites";
-import { summaryImages } from "./info/summaryImages";
-import { lfp } from "./info/lfp";
-import { Project, projects } from "./info/projects";
+import { websitesList } from "../info/websites";
+import { summaryImages } from "../info/summaryImages";
+import { lfp } from "../info/lfp";
+import { Project, projects } from "../info/projects";
 
 export default function Home() {
   const [modalOpened, setModalOpened] = useState<boolean>(false);

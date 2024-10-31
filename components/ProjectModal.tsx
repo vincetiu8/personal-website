@@ -17,7 +17,7 @@ import {
   IconWorld,
 } from "@tabler/icons";
 import { toolColorMapping } from "../utils/toolColorMapping";
-import { Project } from "../pages/info/projects";
+import { Project } from "../info/projects";
 
 export type ProjectModalProps = {
   opened: boolean;
