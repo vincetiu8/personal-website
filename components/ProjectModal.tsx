@@ -17,26 +17,7 @@ import {
   IconWorld,
 } from "@tabler/icons";
 import { toolColorMapping } from "../utils/toolColorMapping";
-
-export type Person = {
-  name: string;
-  link: string;
-};
-
-export type Project = {
-  name: string;
-  description: string;
-  longDescription: string;
-  image?: string;
-  color: string;
-  github?: string;
-  youtube?: string;
-  deck?: string;
-  website?: string;
-  tools: string[];
-  teammates?: Person[];
-  awards?: string[];
-};
+import { Project } from "../pages/info/projects";
 
 export type ProjectModalProps = {
   opened: boolean;
